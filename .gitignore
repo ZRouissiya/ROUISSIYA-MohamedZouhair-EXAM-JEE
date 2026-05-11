@@ -7,3 +7,17 @@ out/
 
 # VS Code
 .vscode/
+
+
+# Java / Maven
+**/target/
+
+# Node / Angular
+**/node_modules/
+**/.angular/
+**/dist/
+**/.cache/
+
+# Local data / logs
+data/
+*.log
