@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3>Contrats</h3>
+  <div>
+    <a class="btn btn-sm btn-primary me-2" routerLink="/contrats/automobile/new">Nouveau Auto</a>
+    <a class="btn btn-sm btn-primary me-2" routerLink="/contrats/habitation/new">Nouveau Habitation</a>
+    <a class="btn btn-sm btn-primary" routerLink="/contrats/sante/new">Nouveau Santé</a>
+  </div>
+</div>
+<table class="table table-bordered">
+  <thead><tr><th>ID</th><th>Type</th><th>Client</th><th>Statut</th><th>Cotisation</th><th>Actions</th></tr></thead>
+  <tbody>
+  <tr *ngFor="let c of contrats">
+    <td>{{ c.id }}</td><td>{{ c.type }}</td><td>{{ c.clientId }}</td><td>{{ c.statut }}</td><td>{{ c.montantCotisation }}</td>
+    <td>
+      <a class="btn btn-sm btn-info me-2" [routerLink]="['/contrats', c.id]">Détails</a>
+      <button class="btn btn-sm btn-success me-2" (click)="valider(c.id)">Valider</button>
+      <button class="btn btn-sm btn-danger" (click)="resilier(c.id)">Résilier</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

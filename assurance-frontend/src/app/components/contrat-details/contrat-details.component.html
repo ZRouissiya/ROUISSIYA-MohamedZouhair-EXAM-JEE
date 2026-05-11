@@ -1,0 +1,7 @@
+<div *ngIf="contrat" class="card">
+  <div class="card-body">
+    <h4>Contrat #{{ contrat.id }} ({{ contrat.type }})</h4>
+    <pre>{{ contrat | json }}</pre>
+    <a class="btn btn-outline-primary" [routerLink]="['/paiements/contrat', contrat.id]">Voir paiements</a>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="card"><div class="card-body">
+  <h4>Nouveau contrat habitation</h4>
+  <div class="row g-2">
+    <div class="col-md-3"><input type="date" class="form-control" [(ngModel)]="payload.dateSouscription"></div>
+    <div class="col-md-3"><input type="number" class="form-control" placeholder="Cotisation" [(ngModel)]="payload.montantCotisation"></div>
+    <div class="col-md-3"><input type="number" class="form-control" placeholder="Durée" [(ngModel)]="payload.dureeContrat"></div>
+    <div class="col-md-3"><input type="number" class="form-control" placeholder="Taux" [(ngModel)]="payload.tauxCouverture"></div>
+    <div class="col-md-4"><input type="number" class="form-control" placeholder="Client ID" [(ngModel)]="payload.clientId"></div>
+    <div class="col-md-4">
+      <select class="form-select" [(ngModel)]="payload.typeLogement">
+        <option>APPARTEMENT</option><option>MAISON</option><option>LOCAL_COMMERCIAL</option>
+      </select>
+    </div>
+    <div class="col-md-4"><input type="number" class="form-control" placeholder="Superficie" [(ngModel)]="payload.superficie"></div>
+    <div class="col-md-12"><input class="form-control" placeholder="Adresse" [(ngModel)]="payload.adresseLogement"></div>
+  </div>
+  <button class="btn btn-success mt-3" (click)="save()">Créer</button>
+</div></div>

@@ -1,0 +1,12 @@
+<div class="row g-3 mb-3">
+  <div class="col-md-4"><div class="card"><div class="card-body"><h6>Total clients</h6><h2>{{ totalClients }}</h2></div></div></div>
+  <div class="col-md-4"><div class="card"><div class="card-body"><h6>Total contrats</h6><h2>{{ totalContrats }}</h2></div></div></div>
+  <div class="col-md-4"><div class="card"><div class="card-body"><h6>Total paiements</h6><h2>{{ totalPaiements }}</h2></div></div></div>
+</div>
+
+<div class="row g-3">
+  <div class="col-md-6"><div class="card"><div class="card-body"><h6>Contrats par type</h6><canvas baseChart [data]="contratsTypeChart" [type]="'pie'"></canvas></div></div></div>
+  <div class="col-md-6"><div class="card"><div class="card-body"><h6>Contrats par statut</h6><canvas baseChart [data]="contratsStatutChart" [type]="'bar'"></canvas></div></div></div>
+  <div class="col-md-6"><div class="card"><div class="card-body"><h6>Paiements par type</h6><canvas baseChart [data]="paiementsTypeChart" [type]="'pie'"></canvas></div></div></div>
+  <div class="col-md-6"><div class="card"><div class="card-body"><h6>Statistiques mensuelles des paiements</h6><canvas baseChart [data]="paiementsMensuelChart" [type]="'line'"></canvas></div></div></div>
+</div>

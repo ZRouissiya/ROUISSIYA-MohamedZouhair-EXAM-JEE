@@ -1,0 +1,14 @@
+<div class="card"><div class="card-body">
+  <h4>Nouveau contrat automobile</h4>
+  <div class="row g-2">
+    <div class="col-md-3"><input type="date" class="form-control" [(ngModel)]="payload.dateSouscription"></div>
+    <div class="col-md-3"><input type="number" class="form-control" placeholder="Cotisation" [(ngModel)]="payload.montantCotisation"></div>
+    <div class="col-md-3"><input type="number" class="form-control" placeholder="Durée" [(ngModel)]="payload.dureeContrat"></div>
+    <div class="col-md-3"><input type="number" class="form-control" placeholder="Taux" [(ngModel)]="payload.tauxCouverture"></div>
+    <div class="col-md-4"><input type="number" class="form-control" placeholder="Client ID" [(ngModel)]="payload.clientId"></div>
+    <div class="col-md-4"><input class="form-control" placeholder="Immatriculation" [(ngModel)]="payload.numeroImmatriculation"></div>
+    <div class="col-md-4"><input class="form-control" placeholder="Marque" [(ngModel)]="payload.marqueVehicule"></div>
+    <div class="col-md-6"><input class="form-control" placeholder="Modèle" [(ngModel)]="payload.modeleVehicule"></div>
+  </div>
+  <button class="btn btn-success mt-3" (click)="save()">Créer</button>
+</div></div>

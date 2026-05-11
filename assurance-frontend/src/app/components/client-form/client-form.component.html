@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card-body">
+    <h4>{{ id ? 'Modifier client' : 'Nouveau client' }}</h4>
+    <div class="mb-2"><label class="form-label">Nom</label><input class="form-control" [(ngModel)]="client.nom"></div>
+    <div class="mb-3"><label class="form-label">Email</label><input class="form-control" [(ngModel)]="client.email"></div>
+    <button class="btn btn-success" (click)="save()">Enregistrer</button>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3>Clients</h3>
+  <a class="btn btn-primary" routerLink="/clients/new">Nouveau client</a>
+</div>
+<div class="input-group mb-3">
+  <input class="form-control" placeholder="Rechercher par nom" [(ngModel)]="search">
+  <button class="btn btn-outline-secondary" (click)="doSearch()">Rechercher</button>
+</div>
+<table class="table table-striped">
+  <thead><tr><th>ID</th><th>Nom</th><th>Email</th><th>Actions</th></tr></thead>
+  <tbody>
+  <tr *ngFor="let c of clients">
+    <td>{{ c.id }}</td><td>{{ c.nom }}</td><td>{{ c.email }}</td>
+    <td>
+      <a class="btn btn-sm btn-warning me-2" [routerLink]="['/clients', c.id, 'edit']">Edit</a>
+      <button class="btn btn-sm btn-danger" (click)="delete(c.id)">Supprimer</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

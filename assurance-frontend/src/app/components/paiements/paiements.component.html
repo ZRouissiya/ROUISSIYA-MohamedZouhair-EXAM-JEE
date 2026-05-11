@@ -1,0 +1,20 @@
+<div class="card mb-3">
+  <div class="card-body">
+    <h4>Paiements - Contrat #{{ contratId }}</h4>
+    <div class="row g-2 align-items-end">
+      <div class="col-md-3"><input type="date" class="form-control" [(ngModel)]="payload.date"></div>
+      <div class="col-md-3"><input type="number" class="form-control" placeholder="Montant" [(ngModel)]="payload.montant"></div>
+      <div class="col-md-3">
+        <select class="form-select" [(ngModel)]="payload.type">
+          <option>MENSUALITE</option><option>PAIEMENT_ANNUEL</option><option>PAIEMENT_EXCEPTIONNEL</option>
+        </select>
+      </div>
+      <div class="col-md-3"><button class="btn btn-success w-100" (click)="add()">Ajouter paiement</button></div>
+    </div>
+  </div>
+</div>
+<div class="alert alert-info">Total payé: {{ totalPaye }} | Reste à payer: {{ resteAPayer }}</div>
+<table class="table table-sm table-striped">
+  <thead><tr><th>ID</th><th>Date</th><th>Montant</th><th>Type</th></tr></thead>
+  <tbody><tr *ngFor="let p of paiements"><td>{{ p.id }}</td><td>{{ p.date }}</td><td>{{ p.montant }}</td><td>{{ p.type }}</td></tr></tbody>
+</table>
